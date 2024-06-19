@@ -23,7 +23,7 @@ int		ft_isalnum(int c); //Completed
 int		ft_isascii(int c); //Completed
 int		ft_isprint(int c); //Completed
 size_t	ft_strlen(const char *s); //Completed
-void	*ft_memset(void *b, int c, size_t len); //Completed
+void	*ft_memset(void *s, int c, size_t n); //Completed
 void	ft_bzero(void *s, size_t n); //Completed
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n); //Completed
 void	*ft_memmove(void *dst, const void *src, size_t len); //Completed
