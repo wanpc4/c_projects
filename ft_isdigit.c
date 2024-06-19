@@ -6,16 +6,14 @@
 /*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:02:58 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/07 17:03:03 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/19 08:55:31 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-    int ft_isdigit(int c);
-	Purpose: To know if it is digit or not (according to ASCII table).
-*/
+int	ft_isdigit(int c);
+
 int	ft_isdigit(int c)
 {
 	if (c < 48 || c > 57)

@@ -6,21 +6,19 @@
 /*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:07:45 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/07 17:07:49 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/19 09:45:38 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdio.h>
 #include "libft.h"
 
-/*
-    int ft_isalnum(int c);
-	Purpose: To identify if they are alphanumeric (lowercase/uppercase) and numbers.
-*/
+int	ft_isalnum(int c);
+
 int	ft_isalnum(int c)
 {
-	if ((c < 48 || c > 57) && (c < 65 || c > 90) && (c < 97 || c > 122))
+	if (ft_isalpha(c) || ft_isdigit(c))
 	{
-		return (0); //False
+		return (1);
 	}
-	return (1); //True
+	return (0);
 }
