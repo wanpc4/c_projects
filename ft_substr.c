@@ -1,3 +1,4 @@
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,7 +27,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 int main()
 {
     char *result;
-    result = ft_substr("Hello", 1, 5);
+    result = ft_substr("Hello", 0, 5);
     printf("%s\n", result);
     free(result);
     return (0);

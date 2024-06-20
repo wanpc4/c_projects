@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:27:37 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/12 11:42:59 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/20 09:02:05 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,17 @@ void	*ft_memchr(const void *s, int c, size_t n); //Completed
 int		ft_memcmp(const void *s1, const void *s2, size_t n); //In progress...
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len); //
 int		ft_atoi(const char *str); //Completed
-char    *ft_substr(char const *s, unsigned int start, size_t len);
-char    *ft_strjoin(char const *s1, char const *s2);
-char    *ft_strtrim(char const *s1, char const *set);
-char    **ft_split(char const *s, char c);
-char    *ft_itoa(int n);
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void    ft_striteri(char *s, void (*f)(unsigned int, char*));
-void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char *s, int fd);
-void    ft_putendl_fd(char *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
+void    *ft_calloc(size_t count, size_t size);
+char    *ft_strdup(const char *s1);
+char    *ft_substr(char const *s, unsigned int start, size_t len); //Completed
+char    *ft_strjoin(char const *s1, char const *s2); //Completed
+char    *ft_strtrim(char const *s1, char const *set); 
+char    **ft_split(char const *s, char c); 
+char    *ft_itoa(int n); //In progress...
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char)); 
+void    ft_striteri(char *s, void (*f)(unsigned int, char*)); //Completed
+void    ft_putchar_fd(char c, int fd); //Completed
+void    ft_putstr_fd(char *s, int fd); //Completed
+void    ft_putendl_fd(char *s, int fd); //Completed
+void    ft_putnbr_fd(int n, int fd); //Completed
 #endif

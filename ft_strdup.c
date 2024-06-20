@@ -1,27 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 17:24:52 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/20 13:11:56 by wwan-ab-         ###   ########.fr       */
+/*   Created: 2024/06/20 08:45:21 by wwan-ab-          #+#    #+#             */
+/*   Updated: 2024/06/20 08:45:24 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned char *a;
-	size_t count;
-
-	a = s;
-	count = 0;
-	while (count < n)
-	{
-		a[count] = 0;
-		count++;
-	}
-}
