@@ -4,6 +4,7 @@
         "libft.h": "c",
         "memory_resource": "c",
         "memory": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "string": "c"
     }
 }
