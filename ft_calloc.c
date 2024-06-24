@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*allocate;
 	size_t	countandsize;
 
-	if ((count != 0) && (size != 0) && (count > SIZE_MAX / count))
+	if ((count != 0) && (size != 0) && (count > SIZE_MAX / size))
 		return (NULL);
 	countandsize = (count * size);
 	allocate = malloc(countandsize);
