@@ -6,30 +6,28 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:29:51 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/12 11:04:37 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:24:34 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
-/*
-	char	*ft_strrchr(const char *s, int c);
-*/
+
 char	*ft_strrchr(const char *s, int c)
 {
-	const char *a;
-	const char *lastOccurrence;
+	const char	*a;
+	const char	*lastoccurrence;
 
 	a = s;
-	lastOccurrence = NULL;
+	lastoccurrence = NULL;
 	while (*a != '\0')
 	{
 		if (*a == c)
-		{
-			lastOccurrence = a;
-		}
+			lastoccurrence = a;
 		a++;
 	}
-	return ((char *)lastOccurrence);
+	if (*a == c)
+	{
+		return ((char *)a);
+	}
+	return ((char *)lastoccurrence);
 }

@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 07:25:16 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/20 10:34:07 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:36:56 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,27 @@
 
 void	ft_putnbr_fd(int n, int fd);
 
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	c;
+
+	if (n == INT_MIN)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	c = '0' + (n % 10);
+	write(fd, &c, 1);
+}
+
+/*
 void	ft_putnbr_fd(int n, int fd)
 {
 	int	converter;
@@ -43,3 +64,4 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &negative, 1);
 	}
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:24:52 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/20 13:11:56 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:28:16 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *a;
-	size_t count;
+	unsigned char	*a;
+	size_t			count;
 
 	a = s;
 	count = 0;

@@ -3,20 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:27:05 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/07 17:27:07 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:38:05 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
-/*
-	size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
-	***Flagged***
-*/
+
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t count_dst;
@@ -25,21 +20,16 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 
 	count_dst = 0;
 	count_src = 0;
-	while ((dst[count_dst] != '\0') && (count_dst < dstsize - 1))
-	{
+	while (count_dst < dstsize && dst[count_dst] != '\0')
 		count_dst++;
-	}
-
 	while (src[count_src] != '\0')
-	{
 		count_src++;
-	}
-
 	length = count_dst + count_src;
-
-	if (count_dst < dstsize - 1)
+	if (count_dst < dstsize)
 	{
-		size_t count = count_dst;
+		size_t count;
+
+		count = count_dst;
 		while (count < dstsize - 1 && *src != '\0')
 		{
 			dst[count] = *src;
@@ -47,6 +37,10 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 			src++;
 		}
 		dst[count] = '\0';
+	}
+	else
+	{
+		length = dstsize + count_src;
 	}
 	return (length);
 }

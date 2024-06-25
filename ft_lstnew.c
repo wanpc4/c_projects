@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 08:00:55 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 08:02:59 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:58:54 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,3 @@ t_list	*ft_lstnew(void *content)
 	new -> next = NULL;
 	return (new);
 }
-
-//the symbol '->' is used to access members of a struct through a pointer.

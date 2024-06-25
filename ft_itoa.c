@@ -3,67 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 06:59:39 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/19 07:00:03 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:49:48 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 #include <stdlib.h>
 
-char *ft_itoa(int n);
-
-char *ft_itoa(int n)
+static size_t	ft_nbrlen(int n)
 {
-    char    *number;
-    int     count;
-    int     temp;
+	size_t len;
+	unsigned int num;
 
-    temp = n;
-    if (n < 0)
-        count = 0;
-    else
-    {
-        count = -1;
-    }
-    while (temp != 0)
-    {
-        count++;
-        temp /= 10;
-    }
-    number = (char *) malloc((count + 1) * sizeof(char));
-    if (number == NULL)
-        return (NULL);
-    if (n == 0)
-    {
-        number[0] = '0';
-        return (number);
-    }
-    number[count + 1] = '\0';
-    if (n < 0)
-    {
-        number[0] = '-';
-        n = -n;
-    }
-    while (n != 0)
-    {
-        number[count] = '0' + (n % 10);
-        count--;
-        n /= 10;
-    }
-    return (number);
+	len = 1;
+	if (n < 0)
+		num = -n;
+	else
+	{
+		num = n;
+	}
+	while (num >= 10)
+	{
+		num /= 10;
+		len++;
+	}
+	return (len);
 }
 
-int main()
+char	*ft_itoa(int n)
 {
-    char *result;
-    result = ft_itoa(2147483647);
-    if (result != NULL)
-    {
-        printf("%s\n", result);
-        free(result);
-    }
-    return 0;
+	char	*str;
+	size_t	len;
+	unsigned int	num;
+
+	len = ft_nbrlen(n);
+
+	if (n < 0)
+		num = -n;
+	else 
+	{
+		num = n;
+	}
+	if (n < 0)
+		len++;
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+
+	if (n < 0)
+		str[0] = '-';
+	if (num == 0)
+		str[0] = '0';
+	while (num > 0)
+	{
+		str[--len] = '0' + (num % 10);
+		num /= 10;
+	}
+	return (str);
 }

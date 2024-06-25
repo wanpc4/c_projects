@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 08:45:07 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/20 13:53:14 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 14:14:54 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (allocate);
 }
-/*
-int main()
-{
-    int *students;
-    int numStudents = 12;
-    students = ft_calloc(numStudents, sizeof(*students));
-    printf("%lu", numStudents * sizeof(*students));
-    return (0);
-}
-*/
