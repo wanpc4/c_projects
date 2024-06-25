@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:17:00 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 15:41:23 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/26 02:46:32 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	len_need;
+	const char	*x;
+	const char	*y;
+	size_t		z;
 
-	if (len == 0)
-		return ((char *)haystack);
-	len_need = ft_strlen(needle);
-	if (len_need == 0)
-		return ((char *)haystack);
-	while ((*haystack) && (len >= len_need))
+	x = (const char *)haystack;
+	y = (const char *)needle;
+	z = 0;
+	if (!y[0])
+		return ((char *)x);
+	if (!len)
+		return (0);
+	if (*y == '\0')
+		return ((char *)x);
+	while (*haystack != '\0' && z <= len - ft_strlen(y))
 	{
-		if (*haystack == *needle && ft_memcmp(haystack, needle, len_need) == 0)
+		if (ft_strncmp(x, y, ft_strlen(y)) == 0)
 		{
-			return ((char *)haystack);
+			return ((char *)x);
 		}
-		haystack++;
-		len--;
+		z++;
+		x++;
 	}
 	return (NULL);
 }

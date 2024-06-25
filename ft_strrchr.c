@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:29:51 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 15:24:34 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 17:40:58 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*a;
-	const char	*lastoccurrence;
+	int		count;
+	char	chr;
 
-	a = s;
-	lastoccurrence = NULL;
-	while (*a != '\0')
+	count = ft_strlen(s);
+	chr = (char)c;
+	while (count >= 0)
 	{
-		if (*a == c)
-			lastoccurrence = a;
-		a++;
+		if (s[count] == chr)
+			return ((char *)(s + count));
+		count--;
 	}
-	if (*a == c)
-	{
-		return ((char *)a);
-	}
-	return ((char *)lastoccurrence);
+	return (0);
 }

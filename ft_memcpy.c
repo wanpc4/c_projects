@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:25:43 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 17:20:12 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/26 02:06:55 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	count = 0;
 	while (count < n)
 	{
-		*(char*)(dst + count) = *(char*)(src + count);
+		*(char *)(dst + count) = *(char *)(src + count);
 		count++;
 	}
 	return (dst);

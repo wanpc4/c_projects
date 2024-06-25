@@ -6,62 +6,61 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 06:59:39 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 16:49:48 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/26 01:46:23 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static size_t	ft_nbrlen(int n)
+static char	*ft_char(char *str, unsigned int num, long int len)
 {
-	size_t len;
-	unsigned int num;
-
-	len = 1;
-	if (n < 0)
-		num = -n;
-	else
+	while (num > 0)
 	{
-		num = n;
+		str[len] = '0' + (num % 10);
+		num = num / 10;
+		len--;
 	}
-	while (num >= 10)
+	return (str);
+}
+
+static long int	ft_nbrlen(int n)
+{
+	int			len;
+
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
 	{
-		num /= 10;
 		len++;
+		n = n / 10;
 	}
 	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	len;
+	char			*str;
+	long int		len;
 	unsigned int	num;
+	int				sign;
 
+	sign = 1;
 	len = ft_nbrlen(n);
-
-	if (n < 0)
-		num = -n;
-	else 
-	{
-		num = n;
-	}
-	if (n < 0)
-		len++;
 	str = (char *)malloc((len + 1) * sizeof(char));
-	if (!str)
+	if (str == NULL)
 		return (NULL);
-	str[len] = '\0';
-
-	if (n < 0)
-		str[0] = '-';
-	if (num == 0)
+	str[len--] = '\0';
+	if (n == 0)
 		str[0] = '0';
-	while (num > 0)
+	if (n < 0)
 	{
-		str[--len] = '0' + (num % 10);
-		num /= 10;
+		sign *= -1;
+		num = n * -1;
+		str[0] = '-';
 	}
+	else
+		num = n;
+	str = ft_char(str, num, len);
 	return (str);
 }

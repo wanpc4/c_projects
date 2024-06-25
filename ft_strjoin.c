@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:18:42 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 17:08:11 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/25 23:18:56 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*result;
 	size_t	i;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	count_1 = ft_strlen(s1);
 	count_2 = ft_strlen(s2);
