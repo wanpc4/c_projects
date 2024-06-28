@@ -93,12 +93,11 @@ static char **ft_split_words(char const *s1, char c, int wordnum)
 
 char    **ft_split(char const *s, char c)
 {
-    char    **s2;
-    int    numword;
+    char	**s2;
+    int		numword;
 
     if (s == NULL)
-        return (NULL);
-    
+	    return (NULL);
     numword = count_word(s, c);
     s2 = ft_split_words(s, c, numword);
     return (s2);
