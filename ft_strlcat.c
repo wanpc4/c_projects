@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:27:05 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 17:30:09 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 09:28:37 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t count_dst;
-	size_t count_src;
-	size_t length;
+	size_t	count_dst;
+	size_t	count_src;
+	size_t	length_dest;
+	size_t	count;
 
-	count_dst = 0;
-	count_src = 0;
-	while (count_dst < dstsize && dst[count_dst] != '\0')
+	count_src = ft_strlen(src);
+	if (dst == NULL && dstsize == 0)
+		return (count_src);
+	count_dst = ft_strlen(dst);
+	length_dest = count_dst;
+	if (dstsize <= length_dest)
+		return (dstsize + count_src);
+	count = 0;
+	while (src[count] && count_dst + 1 < dstsize)
+	{
+		dst[count_dst] = src[count];
+		count++;
 		count_dst++;
-	while (src[count_src] != '\0')
-		count_src++;
-	length = count_dst + count_src;
-	if (count_dst < dstsize)
-	{
-		size_t count;
-
-		count = count_dst;
-		while (count < dstsize - 1 && *src != '\0')
-		{
-			dst[count] = *src;
-			count++;
-			src++;
-		}
-		dst[count] = '\0';
 	}
-	else
-	{
-		length = dstsize + count_src;
-	}
-	return (length);
+	dst[count_dst] = '\0';
+	return (length_dest + count_src);
 }

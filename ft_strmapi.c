@@ -6,12 +6,11 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 07:01:05 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 16:09:46 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 10:08:17 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 

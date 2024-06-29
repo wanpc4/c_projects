@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 18:17:00 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/26 02:46:32 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 09:32:19 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	const char	*haystack;
 	const char	*needle;
 	size_t		count;
-	
+
 	haystack = (const char *)big;
 	needle = (const char *)little;
 	count = 0;

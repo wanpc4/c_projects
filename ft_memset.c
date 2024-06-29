@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:26:03 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/07 17:26:05 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 08:37:48 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *a;
-	unsigned char replace;
-	size_t count;
+	unsigned char	*a;
+	unsigned char	replace;
+	size_t			count;
 
 	a = s;
 	replace = (unsigned char)c;

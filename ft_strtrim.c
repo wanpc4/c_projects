@@ -6,13 +6,11 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 07:27:43 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 14:21:35 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 10:08:27 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set);
 int		is_char_there(char w, char const *word);

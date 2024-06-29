@@ -6,7 +6,7 @@
 /*   By: wwan-ab- <wwan-ab-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:22:57 by wwan-ab-          #+#    #+#             */
-/*   Updated: 2024/06/25 15:31:10 by wwan-ab-         ###   ########.fr       */
+/*   Updated: 2024/06/29 09:31:45 by wwan-ab-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (length == n)
 		return (0);
-
 	if (s1[length] == '\0' && s2[length] != '\0')
 		return (-1);
 	else
